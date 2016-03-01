@@ -62,10 +62,11 @@ Q.all(promises)
     var books = resolve[0];
     var authors = resolve[1];
     var ids = resolve[2];
+    console.log(authors);
     ids.forEach(function(item) {
-      var temp = authors[item.id].firstName + ' ' +
-        authors[item.id].lastName;
-      books[item.id].author = temp;
+      var temp = authors[item.authorId].firstName + ' ' +
+        authors[item.authorId].lastName;
+      books[item.bookId].author = temp;
     })
     console.log(books);
   })
